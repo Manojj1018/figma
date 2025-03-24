@@ -1,0 +1,318 @@
+/* Top section: Promotional banners */
+.banners {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between banners */
+    margin-bottom: 30px; /* Space between banners and newsletter */
+}
+
+.banner {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+/* Left banner */
+.banner-left {
+    background: linear-gradient(to right, #1C2526, #2E3A3B); /* Dark gradient */
+}
+
+/* Right banner */
+.banner-right {
+    position: relative;
+    background-image: url('https://via.placeholder.com/600x400?text=Store+Image'); /* Placeholder for blurred image */
+    background-size: cover;
+}
+
+.banner-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px); /* Simulate blurred background */
+    z-index: 1;
+}
+
+.banner-right > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above blurred layer */
+}
+
+/* Banner text */
+.banner-text {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.banner-text p {
+    font-size: 16px;
+}
+
+/* Banner image/icon */
+.banner-image {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.banner-right .banner-image {
+    background-color: #FFFF00; /* Yellow sign */
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Newsletter subscription form */
+.newsletter {
+    background-color: #E6F7E9; /* Light mint green */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-text {
+    flex: 1;
+}
+
+.newsletter-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333; /* Dark gray */
+    margin-bottom: 5px;
+}
+
+.newsletter-text p {
+    font-size: 16px;
+    color: #333333;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: 1px solid #D3D3D3; /* Light gray border */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23A9A9A9" viewBox="0 0 16 16"><path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4zm1 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/></svg>') no-repeat 10px center;
+    padding-left: 30px; /* Space for envelope icon */
+}
+
+.newsletter-form input::placeholder {
+    color: #A9A9A9; /* Light gray placeholder */
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #A8E6CF; /* Light green */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+HTML POPULAR SALE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Sale Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sale-section">
+        <div class="header">
+            <h2 class="title">Popular Sale</h2>
+            <button class="view-more">VIEW MORE</button>
+        </div>
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="pizza.jpg" alt="Pizza" class="image">
+                    <div class="category">FOOD</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">FLAT 10% OFF On Double Cheese Margherita</h3>
+                <div class="details">
+                    <div class="detail">🏪 NW STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="lake.jpg" alt="Lake with mountains" class="image">
+                    <div class="category">TRAVEL</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">SAIL AWAY ABOARD THE MSC BELLISSIMA AND ENJOY LIMITLESS</h3>
+                <div class="details">
+                    <div class="detail">📍 AUCKLAND</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="desk.jpg" alt="Desk with computer" class="image">
+                    <div class="category">BROADBAND</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">UNLIMITED BROADBAND PLAN WITH 80GBPS SPEED</h3>
+                <div class="details">
+                    <div class="detail">🏪 BROADBAND STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="gym.jpg" alt="Person lifting weights" class="image">
+                    <div class="category">SPORT & FITNESS</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">BUY A GOLD'S GYM MEMBERSHIP TODAY</h3>
+                <div class="details">
+                    <div class="detail">🏪 GOLD'S GYM</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="sunglasses.jpg" alt="Handbag and sunglasses" class="image">
+                    <div class="category">FASHION</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">RAY-BAN SUNGLASSES HEXAGONAL RB3548N</h3>
+                <div class="details">
+                    <div class="detail">🏪 NW STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="building.jpg" alt="Modern building" class="image">
+                    <div class="category">HOME & LIVING</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">PROFESSIONAL CARPET SHAMPOO CLEAN - WITHIN 15KM</h3>
+                <div class="details">
+                    <div class="detail">🏪 NW STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 7 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="facial.jpg" alt="Person with facial mask" class="image">
+                    <div class="category">HEALTH & BEAUTY</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">SIX SESSIONS OF LASER HAIR REMOVAL BY BOTANY JUNCTION</h3>
+                <div class="details">
+                    <div class="detail">🏪 NW STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+            <!-- Card 8 -->
+            <div class="card">
+                <div class="image-box">
+                    <img src="cyclists.jpg" alt="Group of cyclists" class="image">
+                    <div class="category">SPORT & FITNESS</div>
+                    <div class="heart">♡</div>
+                </div>
+                <div class="stats">
+                    <span>👁️ 500</span>
+                    <span>❤️ 200</span>
+                </div>
+                <h3 class="card-title">INTERIOR OR EXTERIOR CAR VALET IN AUCKLAND</h3>
+                <div class="details">
+                    <div class="detail">🏪 NW STORE</div>
+                    <div class="detail">📍 MULTIPLE LOCATION</div>
+                    <div class="detail">📅 EXPIRE IN 42 DAYS</div>
+                </div>
+                <button class="view-sale">VIEW SALE</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
