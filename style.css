@@ -259,6 +259,8 @@
   }
 
   .slide img {
+    max-width: 100%;
+    max-height: 100%;
     width: 858px;
     height: 615px;
     display: block;
@@ -268,7 +270,7 @@
   .slide-heading {
     position: absolute;
     top: 70px;
-    left: 13%;
+    left: 9%;
     font-size: 35px;
     font-weight: 700;
     color: #FFFFFF; 
@@ -279,7 +281,7 @@
   .shop-now {
     position: absolute;
     top: 28%; 
-    left: 13%;
+    left: 9%;
     background: #43df9a; 
     color: white;
     padding: 10px 20px;
@@ -470,4 +472,16 @@
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
+}
+.view-sale{
+    background: #43DF9A;
+    width: 100%;
+    margin: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 10px
 }
